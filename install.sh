@@ -114,7 +114,7 @@ function deploy_node() {
 
     mkdir -p "$INSTALL_DIR/target/release"
     echo "📥 Downloading BlockMesh CLI..."
-    curl -sL https://github.com/block-mesh/block-mesh-monorepo/releases/download/v0.0.340/blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz -o "$INSTALL_DIR/blockmesh-cli.tar.gz"
+    curl -sL https://github.com/block-mesh/block-mesh-monorepo/releases/download/v0.0.347/blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz -o "$INSTALL_DIR/blockmesh-cli.tar.gz"
     tar -xzf "$INSTALL_DIR/blockmesh-cli.tar.gz" --strip-components=3 -C "$INSTALL_DIR/target/release"
 
     if [[ ! -f "$INSTALL_DIR/target/release/blockmesh-cli" ]]; then
@@ -135,7 +135,7 @@ function deploy_node() {
         -e EMAIL="$email" \
         -e PASSWORD="$password" \
         --workdir /app \
-        ubuntu:22.04 ./blockmesh-cli --email "$email" --password "$password"
+        ubuntu ./blockmesh-cli --email "$email" --password "$password"
 
     read -p "Press Enter to continue..."
 }
