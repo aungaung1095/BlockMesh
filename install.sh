@@ -13,7 +13,7 @@ BANNER="
 "
 
 check_docker_status() {
-    echo "╔═ System Status ══════════════╗"
+    echo "╔═════════ System Status ═════════╗"
     if command -v docker &>/dev/null; then
         docker_version=$(docker --version | cut -d ' ' -f3 | tr -d ',')
         echo "║ Docker: ✅ v$docker_version"
@@ -29,13 +29,13 @@ check_docker_status() {
     fi
 
     if [ "$(docker ps -q -f name=blockmesh-cli-container)" ]; then
-        echo "║ BlockMesh Node: 🟢 Running"
+        echo "║ BlockMesh Node: 🟢 Running      ║"
     elif [ "$(docker ps -aq -f name=blockmesh-cli-container)" ]; then
-        echo "║ BlockMesh Node: 🔴 Stopped"
+        echo "║ BlockMesh Node: 🔴 Stopped      ║"
     else
-        echo "║ BlockMesh Node: ⚪ Not Deployed"
+        echo "║ BlockMesh Node: ⚪ Not Deployed ║"
     fi
-    echo "╚══════════════════════════════╝"
+    echo "╚═══════════════════════════════════╝"
 }
 
 mkdir -p "$INSTALL_DIR"
