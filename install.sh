@@ -23,7 +23,6 @@ check_docker_status() {
     
     if command -v docker-compose &>/dev/null; then
         compose_version=$(docker-compose --version | cut -d ' ' -f3 | tr -d ',')
-        echo "║ Docker Compose: ✅ v$compose_version"
     else
         echo "║ Docker Compose: ❌ Not Installed"
     fi
