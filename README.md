@@ -5,13 +5,15 @@ This script automates the deployment process of a BlockMesh node, making it easi
 ## ⚡ Quick Install
 
 Using curl:
+
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Galkurta/BlockMesh/main/install.sh -o install.sh && chmod +x install.sh && sudo ./install.sh
+curl -fsSL https://raw.githubusercontent.com/Galkurta/BlockMesh/main/blockmesh.sh -o blockmesh.sh && chmod +x blockmesh.sh && sudo ./blockmesh.sh
 ```
 
 Using wget:
+
 ```bash
-wget https://raw.githubusercontent.com/Galkurta/BlockMesh/main/install.sh && chmod +x install.sh && sudo ./install.sh
+wget https://raw.githubusercontent.com/Galkurta/BlockMesh/main/blockmesh.sh && chmod +x blockmesh.sh && sudo ./blockmesh.sh
 ```
 
 ## 🚀 Features
@@ -35,13 +37,15 @@ Before running the script, you need:
 ## 🔧 After Installation
 
 Once installed, you can run the node manager anytime using:
+
 ```bash
-sudo ~/.blockmesh/install.sh
+sudo ~/.blockmesh/blockmesh.sh
 ```
 
 ## 📊 System Status
 
 The script shows real-time status of:
+
 - Docker installation
 - Docker Compose installation
 - BlockMesh node status (Running/Stopped/Not Deployed)
@@ -51,11 +55,13 @@ The script shows real-time status of:
 If you encounter any issues:
 
 1. **Docker Installation Fails**
+
    - Ensure your system is up to date
    - Check internet connectivity
    - Verify system compatibility
 
 2. **Node Won't Start**
+
    - Verify your credentials
    - Check Docker service status
    - Ensure ports are not in use
@@ -96,9 +102,11 @@ This is an unofficial installation script. Please use at your own discretion and
 ## 💪 Support
 
 If you need help or have questions:
+
 1. Check the [BlockMesh Documentation](https://docs.blockmesh.xyz)
 2. Join the [BlockMesh Community](https://discord.gg/blockmesh)
 3. Submit an issue in this repository
 
 ---
+
 Created with ❤️ for the BlockMesh Community
